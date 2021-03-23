@@ -543,8 +543,10 @@
 
 - 当捕获对象变量时，block 中的描述结构体 `__xxx_block_desc_0` 中多了名为 `copy` 和 `dispose` 的函数指针；
 
-  - 当 block 从栈拷贝到堆时，调用 `_Block_object_assign` 函数，
+  - 当 block 从栈拷贝到堆时，调用 `_Block_object_assign` 函数。
+
   - 当 block 从堆内存释放时，调用 `_Block_object_dispose` 函数。
+
   - 最后一个参数决定了后续处理对象的引用的方式：
 
   | 枚举                  | 值   | 内存处理                                                   |
